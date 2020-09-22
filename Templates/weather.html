@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Weather Forecasts</title>
+  <meta name="description" content="Weather Forecasts">
+  <meta name="author" content="Prathik Ramesh">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"/>
+
+</head>
+
+<body>
+
+  <div class="top">
+    <h1>US Weather Forecasts</h1>
+    <br>
+    <p>Seven day weather forecasts for any location in the United States!</p>
+    <p>Information from the National Weather Service.</p>
+  </div>
+
+  <div class="input">
+   <form action="{{ url_for('forecast') }}" method="post">
+    <fieldset>
+      <label for="address">Your Address:</label>
+      <input type="text" name="address" style="background-color:white">
+    	<input type="submit" name="submit" style="background-color:white" value="Get My Forecast!">
+    </fieldset>
+   </form> 
+  </div>
+
+  <div class="sms">
+     <p>Or get a 2 day forecast sent straight to your phone!</p>
+     <form action="{{ url_for('sms') }}" method="post">
+      <fieldset>
+        <label for="address">Your Address:</label>
+        <input type="text" name="address" style="background-color:white">
+        <label for="number">Your Number (no spaces/dashes):</label>
+        <input type="text" name="number" style="background-color:white">
+        <input type="submit" name="submit" style="background-color:white" value="Send SMS!"><br>
+      </fieldset>
+   </form> 
+
+</body>
+</html>

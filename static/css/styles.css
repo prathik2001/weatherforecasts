@@ -1,0 +1,39 @@
+*
+{
+	margin-left: 20px;
+	background-color: #F0F8FF;
+}
+
+dl
+{
+	margin-left: 40px;
+	border: 10px solid black;
+}
+
+dd
+{
+	margin-left: 90px;
+	column-width: 50%;
+	text-align: left;
+	padding-left: 75px;
+	margin-bottom: 10px;
+}
+
+dt
+{
+	float: left;
+	text-align: right;
+	column-width: 130px;
+	font-weight: bold;
+}
+
+a
+{
+	margin-left: 0px;
+}
+
+.wfo
+{
+	line-height: 0px;
+}
+

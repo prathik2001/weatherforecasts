@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Weather</title>
+  <meta name="description" content="Weather Forecasts">
+  <meta name="author" content="Meateorologist Corp.">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"/>
+
+</head>
+
+<body>
+  <h1> Your Seven Day Forecast </h1>
+
+  <div class="wfo">
+    <h3>Forecast Office:</h3>
+    <p>{{ wfo }}</p>
+  </div>
+
+    <dl id="forecast_space">
+      <dt style="margin-top:10px" class="forecast_day">{{ forecast_day[0] }}:</dt>
+      <dd style="margin-top:10px" class="forecast">{{ forecast[0] }}</dd>
+      <dt class="forecast_day">{{ forecast_day[1] }}:</dt>
+      <dd class="forecast">{{ forecast[1] }}</dd>
+      <dt class="forecast_day">{{ forecast_day[2] }}:</dt>
+      <dd class="forecast">{{ forecast[2] }}</dd>
+      <dt class="forecast_day">{{ forecast_day[3] }}:</dt>
+      <dd class="forecast">{{ forecast[3] }}</dd>
+      <dt class="forecast_day">{{ forecast_day[4] }}:</dt>
+      <dd class="forecast">{{ forecast[4] }}</dd>
+      <dt class="forecast_day">{{ forecast_day[5] }}:</dt>
+      <dd class="forecast">{{ forecast[5] }}</dd>
+      <dt class="forecast_day">{{ forecast_day[6] }}:</dt>
+      <dd class="forecast">{{ forecast[6] }}</dd>
+      <dt class="forecast_day">{{ forecast_day[7] }}:</dt>
+      <dd class="forecast">{{ forecast[7] }}</dd>
+      <dt class="forecast_day">{{ forecast_day[8] }}:</dt>
+      <dd class="forecast">{{ forecast[8] }}</dd>
+      <dt class="forecast_day">{{ forecast_day[9] }}:</dt>
+      <dd class="forecast">{{ forecast[9] }}</dd>
+      <dt class="forecast_day">{{ forecast_day[10] }}:</dt>
+      <dd class="forecast">{{ forecast[10] }}</dd>
+      <dt class="forecast_day">{{ forecast_day[11] }}:</dt>
+      <dd class="forecast">{{ forecast[11] }}</dd>
+      <dt class="forecast_day">{{ forecast_day[12] }}:</dt>
+      <dd class="forecast">{{ forecast[12] }}</dd>
+      <dt class="forecast_day">{{ forecast_day[13] }}:</dt>
+      <dd class="forecast">{{ forecast[13] }}</dd>
+    </dl>
+
+  <div class="button">
+    <form action="{{ url_for('home') }}" method="post">
+    <input type="submit" value="New Search"><br>
+    </form> 
+  </div>
+
+  <p>Forecast information retrieved from the <a href="https://www.weather.gov/">National Weather Service</a>.</p>
+  
+</body>
+</html>
