@@ -109,7 +109,7 @@ def sms():
 		custom.append(forecast_day_list[3])
 		custom.append(forecast_list[3])
 
-		body = ("Here's your weather report for " + projectpath + ": " + "\n\n" + 
+		body = ("Here's your weather report for " + project_path + ": " + "\n\n" + 
 				custom[0] + ': ' + custom[1] + '\n\n' + custom[2] + ': ' 
 				+ custom[3] + "\n\n" + custom[4] + ': ' + custom[5] + '\n\n' 
 				+ custom[6] + ': ' + custom[7] + "\n\n" + "Enjoy your day!")
